@@ -30,22 +30,22 @@ func main() {
 		&cli.StringFlag{
 			Name:    "token",
 			Usage:   "you can get the access token when you add a bot in a group.",
-			EnvVars: []string{"TOKEN"},
+			EnvVars: []string{"TOKEN", "PLUGIN_TOKEN"},
 		},
 		&cli.StringFlag{
 			Name:    "color",
 			Usage:   "color the title for easier identification.",
-			EnvVars: []string{"MESSAGE_COLOR"},
+			EnvVars: []string{"MESSAGE_COLOR", "PLUGIN_COLOR"},
 		},
 		&cli.StringFlag{
 			Name:    "title",
 			Usage:   "message title.",
-			EnvVars: []string{"MESSAGE_TITLE"},
+			EnvVars: []string{"MESSAGE_TITLE", "PLUGIN_TITLE"},
 		},
 		&cli.StringFlag{
 			Name:    "content",
 			Usage:   "message content.",
-			EnvVars: []string{"MESSAGE_CONTENT"},
+			EnvVars: []string{"MESSAGE_CONTENT", "PLUGIN_CONTENT"},
 		},
 		&cli.StringFlag{
 			Name:    "commit.sha",
