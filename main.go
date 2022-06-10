@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/urfave/cli/v2"
 	"io"
@@ -70,7 +71,12 @@ func run(c *cli.Context) (err error) {
 		Title:           c.String("title"),
 		MarkdownContent: c.String("content"),
 	}
+	value, err := json.Marshal(template.MarkdownContent)
+	if err == nil {
+		template.MarkdownContent = string(value)
+	}
 	content, err := template.Content()
+	fmt.Println("body", content)
 	if err != nil {
 		log.Fatal(err)
 	}

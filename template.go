@@ -33,7 +33,7 @@ const (
         "elements": [
             {
                 "tag": "markdown",
-                "content": "{{.MarkdownContent}}"
+                "content": {{.MarkdownContent}}
             }
         ]
     }
